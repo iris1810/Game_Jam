@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "BlockInputAction",
+    "maps": [
+        {
+            "name": "Standard",
+            "id": "f0a3e88e-2812-4eca-83c4-1e9551f55642",
+            "actions": [
+                {
+                    "name": "Click",
+                    "type": "Button",
+                    "id": "5c2abc3b-dee8-4a61-abec-552de9a16a9e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ee36f61a-2090-46e1-8276-c592f22fdf1b",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
