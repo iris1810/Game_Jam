@@ -3,24 +3,45 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.Controls;
+using Unity.VisualScripting.ReorderableList.Element_Adder_Menu;
 
 public class Grab : MonoBehaviour, IPointerDownHandler,IBeginDragHandler,IEndDragHandler,IDragHandler
 {   
     private Vector3 offset;
-    private bool isInhouseZone = false;
-    private SpriteRenderer sprite;
+    private Vector3 fallBackPosition;
 
-    [SerializeField] private Transform houseTarget;
+    private SpriteRenderer sprite;
+    private Camera mainCamera;
+    private HouseSlot currentHouse;
+    private HouseSlot previousHouse;
+
+    [SerializeField] private LayerMask houseLayer;
+
+
+    private void Awake()
+    {
+        sprite = GetComponent<SpriteRenderer>();
+        mainCamera = Camera.main;
+    }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("On begin drag");
+
+        previousHouse = currentHouse;
+        //save the preivous position
+        fallBackPosition = transform.position;
 
         if (sprite != null)
         {
             Color colorTemp = sprite.color;
             colorTemp.a = 0.6f;
             sprite.color = colorTemp;
+        }
+        if (currentHouse != null)
+        {
+            currentHouse.ClearEnemy();
+            currentHouse = null;
         }
     }
 
@@ -43,15 +64,35 @@ public class Grab : MonoBehaviour, IPointerDownHandler,IBeginDragHandler,IEndDra
             colorTemp.a = 1f;
             sprite.color = colorTemp;
         }
+        //check for point have any colision with layer hosue
+        Collider2D hit = Physics2D.OverlapPoint(transform.position, houseLayer);
 
-        if (isInhouseZone && houseTarget != null)
+        if (hit != null)
         {
-            transform.position = houseTarget.position;
-            Debug.Log("Dropped into house");
-
-            // GetComponent<Collider2D>().enabled = false;
-            // enabled = false;
+            HouseSlot house = hit.GetComponent<HouseSlot>();
+            if (house != null && !house.IsOccupied())
+            {
+                transform.position = house.transform.position;
+                house.SetEnemy(this);
+                currentHouse = house;
+                Debug.Log("Dropped into house");
+            }
+            else
+            {
+                ReturnBack();
+            }
         }
+    }
+
+    public void ReturnBack()
+    {
+        transform.position = fallBackPosition;
+        if (previousHouse != null)
+        {
+            currentHouse = previousHouse;
+            previousHouse.SetEnemy(this);
+        }
+        Debug.Log("Return Back");
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -64,21 +105,5 @@ public class Grab : MonoBehaviour, IPointerDownHandler,IBeginDragHandler,IEndDra
         Debug.Log("OnPointerDown");
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("House"))
-        {
-            isInhouseZone = true;
-            Debug.Log("Enter House Zone");
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("House"))
-        {
-            isInhouseZone = false;
-            Debug.Log("Exit house Zone");
-        }
-    }
+    
 }
