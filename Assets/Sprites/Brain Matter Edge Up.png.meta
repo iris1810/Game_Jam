@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: 9f460f49147e25d4b90e988e4678241d
+=======
+guid: 3ddf87b7eea194df781cdc3d60c57787
+>>>>>>> Stashed changes
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -104,9 +108,15 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+<<<<<<< Updated upstream
         y: 7
         width: 32
         height: 24
+=======
+        y: 9
+        width: 32
+        height: 22
+>>>>>>> Stashed changes
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

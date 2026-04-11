@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: db63fc97d989de349bfb6f9f430a9816
+=======
+guid: db7f6d8095c8c4fa89b86593de939502
+>>>>>>> Stashed changes
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -103,10 +107,17 @@ TextureImporter:
       name: Brain Matter Corner BL_0
       rect:
         serializedVersion: 2
+<<<<<<< Updated upstream
         x: 0
         y: 1
         width: 32
         height: 31
+=======
+        x: 1
+        y: 0
+        width: 31
+        height: 32
+>>>>>>> Stashed changes
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
