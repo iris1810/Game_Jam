@@ -3,25 +3,25 @@ using UnityEngine;
 public class inputedActions : MonoBehaviour
 {
     public static inputedActions Instance {get; private set;}
-    public PlayerInputs.PlayerActionsActions input;
+    public PlayerInputs.PlayerActionsActions inputs;
+  
 
     private void Awake()
     {
         Instance = this;
-        var inputs= new PlayerInputs();
+        inputs= new();
         inputs.Enable();
-        input= inputs.playerActions;
-        input.Enable();
+        //inputs.Standard.Enable();
 
     } 
     
     public void DisableInput()
     {
-        input.Disable();
+        inputs.Disable();
     }
 
     public void EnableInput()
     {
-        input.Enable();
+        inputs.Enable();
     }
 }
