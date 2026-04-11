@@ -119,8 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
-<<<<<<< Updated upstream:Assets/Scenes/SampleScene.unity
-=======
 --- !u!1 &315459883
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,7 +228,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1897589532}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &338059965
 SpriteRenderer:
@@ -291,7 +289,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
->>>>>>> Stashed changes:Assets/Scenes/Puzzle1.unity
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,10 +527,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream:Assets/Scenes/SampleScene.unity
---- !u!1001 &7513920062004489516
-PrefabInstance:
-=======
 --- !u!1 &1179316765
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,8 +611,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.3, y: 0.3}
-    newSize: {x: 0.3, y: 0.3}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -675,12 +668,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 3822659803414769141, guid: 6e6cfa411ff1e4b21956ab44d08b3a46, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a1662ae0020097d45a9a11e49b155405, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.3, y: 0.3}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -717,74 +710,12 @@ Transform:
   - {fileID: 1179316766}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1897589531
-GameObject:
->>>>>>> Stashed changes:Assets/Scenes/Puzzle1.unity
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2810573234492720834, guid: aa70501b538836440810fd99bef33ada, type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7477060277994968940, guid: aa70501b538836440810fd99bef33ada, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7477060277994968940, guid: aa70501b538836440810fd99bef33ada, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7477060277994968940, guid: aa70501b538836440810fd99bef33ada, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7477060277994968940, guid: aa70501b538836440810fd99bef33ada, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7477060277994968940, guid: aa70501b538836440810fd99bef33ada, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7477060277994968940, guid: aa70501b538836440810fd99bef33ada, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7477060277994968940, guid: aa70501b538836440810fd99bef33ada, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7477060277994968940, guid: aa70501b538836440810fd99bef33ada, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7477060277994968940, guid: aa70501b538836440810fd99bef33ada, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7477060277994968940, guid: aa70501b538836440810fd99bef33ada, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: aa70501b538836440810fd99bef33ada, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 619394802}
-<<<<<<< Updated upstream:Assets/Scenes/SampleScene.unity
-  - {fileID: 7513920062004489516}
-=======
-  - {fileID: 1897589532}
   - {fileID: 1501506702}
+  - {fileID: 338059964}
   - {fileID: 315459886}
->>>>>>> Stashed changes:Assets/Scenes/Puzzle1.unity
