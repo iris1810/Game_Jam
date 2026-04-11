@@ -388,6 +388,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 321455180066832722, guid: aa70501b538836440810fd99bef33ada, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2810573234492720834, guid: aa70501b538836440810fd99bef33ada, type: 3}
       propertyPath: m_Name
       value: Player
@@ -704,6 +708,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::timer
   startingTime: 2
   timerHUD: {fileID: 98216274}
+  Player: {fileID: 210232241}
   gameOverTrigger: GameOver
   delayBefore: 2
 --- !u!4 &1417624064

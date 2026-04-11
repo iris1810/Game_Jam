@@ -4,8 +4,9 @@ using TMPro;
 
 public class timer : MonoBehaviour
 {
-    public float startingTime = 2f; // 1 minute
+    public float startingTime = 60f; // 1 minute
     public TextMeshProUGUI timerHUD;
+    public GameObject Player;
     
 
     public string gameOverTrigger = "GameOver";
@@ -31,10 +32,9 @@ public class timer : MonoBehaviour
         {
             curTime = 0f;
             UpdateText();
-           if (gameObject.CompareTag("Player"))
-            {
-                Destroy(gameObject);
-            }
+           
+            Destroy(Player);
+            
             return;
         }
 
@@ -48,21 +48,4 @@ public class timer : MonoBehaviour
         timerHUD.text = $"{minutes:00}:{seconds:00}";
     }
 
-    /*private IEnumerator TheEnd()
-    {
-        isGameOver = true;
-
-        if (PlayerMovement != null)
-            PlayerMovement.enabled = false;
-
-        if (PlayerCam != null)
-            PlayerCam.enabled = false;
-
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-
-        yield return new WaitForSeconds(delayBefore);
-
-        Time.timeScale = 0f;
-    } */
 }
