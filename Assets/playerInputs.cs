@@ -102,24 +102,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""upAndDown"",
-                    ""type"": ""Button"",
-                    ""id"": ""60251fc8-d9f3-486c-927a-5785cfa459a4"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""leftAndRight"",
-                    ""type"": ""Button"",
-                    ""id"": ""524fdda6-875d-4e8b-a651-24fcb96d6b1e"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""mindPower"",
                     ""type"": ""Button"",
                     ""id"": ""125e5210-b013-4c88-ae2d-4c809a03efe2"",
@@ -140,72 +122,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""action"": ""Sprint"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""05f14742-f69b-45f3-bc2b-12a3c2ff274b"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""upAndDown"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""4024f542-50c4-4961-915a-c9b4e1e87176"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""upAndDown"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""764e6581-fc2d-474e-9b86-1c2726680094"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""upAndDown"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""0a5e6e00-901b-4daf-b64d-15e717c04e6c"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""leftAndRight"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""8ad2fc5e-c680-4b1a-a6ea-6e60793d137e"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""leftAndRight"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""fe2826b0-680e-49b4-952b-516178cabae6"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""leftAndRight"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": """",
@@ -803,8 +719,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         // playerActions
         m_playerActions = asset.FindActionMap("playerActions", throwIfNotFound: true);
         m_playerActions_Sprint = m_playerActions.FindAction("Sprint", throwIfNotFound: true);
-        m_playerActions_upAndDown = m_playerActions.FindAction("upAndDown", throwIfNotFound: true);
-        m_playerActions_leftAndRight = m_playerActions.FindAction("leftAndRight", throwIfNotFound: true);
         m_playerActions_mindPower = m_playerActions.FindAction("mindPower", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
@@ -900,8 +814,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_playerActions;
     private List<IPlayerActionsActions> m_PlayerActionsActionsCallbackInterfaces = new List<IPlayerActionsActions>();
     private readonly InputAction m_playerActions_Sprint;
-    private readonly InputAction m_playerActions_upAndDown;
-    private readonly InputAction m_playerActions_leftAndRight;
     private readonly InputAction m_playerActions_mindPower;
     /// <summary>
     /// Provides access to input actions defined in input action map "playerActions".
@@ -918,14 +830,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "playerActions/Sprint".
         /// </summary>
         public InputAction @Sprint => m_Wrapper.m_playerActions_Sprint;
-        /// <summary>
-        /// Provides access to the underlying input action "playerActions/upAndDown".
-        /// </summary>
-        public InputAction @upAndDown => m_Wrapper.m_playerActions_upAndDown;
-        /// <summary>
-        /// Provides access to the underlying input action "playerActions/leftAndRight".
-        /// </summary>
-        public InputAction @leftAndRight => m_Wrapper.m_playerActions_leftAndRight;
         /// <summary>
         /// Provides access to the underlying input action "playerActions/mindPower".
         /// </summary>
@@ -959,12 +863,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Sprint.started += instance.OnSprint;
             @Sprint.performed += instance.OnSprint;
             @Sprint.canceled += instance.OnSprint;
-            @upAndDown.started += instance.OnUpAndDown;
-            @upAndDown.performed += instance.OnUpAndDown;
-            @upAndDown.canceled += instance.OnUpAndDown;
-            @leftAndRight.started += instance.OnLeftAndRight;
-            @leftAndRight.performed += instance.OnLeftAndRight;
-            @leftAndRight.canceled += instance.OnLeftAndRight;
             @mindPower.started += instance.OnMindPower;
             @mindPower.performed += instance.OnMindPower;
             @mindPower.canceled += instance.OnMindPower;
@@ -982,12 +880,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Sprint.started -= instance.OnSprint;
             @Sprint.performed -= instance.OnSprint;
             @Sprint.canceled -= instance.OnSprint;
-            @upAndDown.started -= instance.OnUpAndDown;
-            @upAndDown.performed -= instance.OnUpAndDown;
-            @upAndDown.canceled -= instance.OnUpAndDown;
-            @leftAndRight.started -= instance.OnLeftAndRight;
-            @leftAndRight.performed -= instance.OnLeftAndRight;
-            @leftAndRight.canceled -= instance.OnLeftAndRight;
             @mindPower.started -= instance.OnMindPower;
             @mindPower.performed -= instance.OnMindPower;
             @mindPower.canceled -= instance.OnMindPower;
@@ -1298,20 +1190,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSprint(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "upAndDown" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnUpAndDown(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "leftAndRight" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnLeftAndRight(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "mindPower" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>

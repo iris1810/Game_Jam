@@ -2,22 +2,26 @@ using UnityEngine;
 
 public class inputedActions : MonoBehaviour
 {
-    public static inputActions Instance {get; private set;}
-    public Plyerinput.playerActions input;
+    public static inputedActions Instance {get; private set;}
+    public playerInputs.playerActions input;
 
     private void Awake()
     {
         Instance = this;
-        var inputs= new 
+        var inputs= new playerActions();
+        inputs.Enable();
+        input= inputs.playerActions;
+        input.Enable();
+
     } 
-    void Start()
+    
+    public void disableInput()
     {
-        
+        input.Disable();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void enableInput()
     {
-        
+        input.Enable();
     }
 }

@@ -16,24 +16,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "upAndDown",
-                    "type": "Button",
-                    "id": "60251fc8-d9f3-486c-927a-5785cfa459a4",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "leftAndRight",
-                    "type": "Button",
-                    "id": "524fdda6-875d-4e8b-a651-24fcb96d6b1e",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "mindPower",
                     "type": "Button",
                     "id": "125e5210-b013-4c88-ae2d-4c809a03efe2",
@@ -54,72 +36,6 @@
                     "action": "Sprint",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "1D Axis",
-                    "id": "05f14742-f69b-45f3-bc2b-12a3c2ff274b",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "upAndDown",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "4024f542-50c4-4961-915a-c9b4e1e87176",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "upAndDown",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "764e6581-fc2d-474e-9b86-1c2726680094",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "upAndDown",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "1D Axis",
-                    "id": "0a5e6e00-901b-4daf-b64d-15e717c04e6c",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "leftAndRight",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "8ad2fc5e-c680-4b1a-a6ea-6e60793d137e",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "leftAndRight",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "fe2826b0-680e-49b4-952b-516178cabae6",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "leftAndRight",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 },
                 {
                     "name": "",
