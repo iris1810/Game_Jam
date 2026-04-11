@@ -4,12 +4,12 @@ public class inputedActions : MonoBehaviour
 {
 <<<<<<< Updated upstream
     public static inputedActions Instance {get; private set;}
-    public playerInputs.playerActions input;
+    public PlayerInputs.PlayerActionsActions input;
 
     private void Awake()
     {
         Instance = this;
-        var inputs= new playerActions();
+        var inputs= new PlayerInputs();
         inputs.Enable();
         input= inputs.playerActions;
         input.Enable();
@@ -25,12 +25,12 @@ public class inputedActions : MonoBehaviour
 >>>>>>> Stashed changes
     } 
     
-    public void disableInput()
+    public void DisableInput()
     {
         input.Disable();
     }
 
-    public void enableInput()
+    public void EnableInput()
     {
         input.Enable();
     }
